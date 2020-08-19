@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f3f3;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+header {
+  padding: 40px 0;
+}
+
+header .logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header .logo p {
+  color: #9b9b9b;
+}
+
+header form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+header .barra-busqueda {
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 100px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+header .categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header .categorias a {
+  color: #9b9b9b;
+  margin: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header .categorias a.activo {
+  color: #0d7cff;
+}
+
+/* ------------------------- */
+/* Grid */
+/* ------------------------- */
+
+.grid {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+  opacity: 1;
+}
+
+.grid .item {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 10px;
+  width: calc(33.333333% - 20px);
+}
+
+.grid .item-contenido {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid .item img {
+  width: 100%;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.grid .item-contenido .item-hover {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  top: 0;
+  transform: scale(0);
+  /* background-color: #0d7cff; */
+  background: rgba(13, 124, 255, 0.5);
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid .item-contenido .item-hover .img-hover {
+  width: 25%;
+}
+
+.grid .item-contenido .item-hover p {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.grid .item-contenido:hover .item-hover {
+  cursor: pointer;
+  transform: scale(1);
+}
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay.activo {
+  display: flex;
+}
+
+.overlay img {
+  max-width: 100%;
+}
+
+.overlay .contenedor-img {
+  position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+}
+
+/* Agregados personalizados */
+.overlay .descripcion {
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  max-width: 388px;
+  background-color: #fff;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #9b9b9b;
+}
+
+.overlay .descripcion .titulo {
+  max-width: inherit;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay .descripcion .titulo .titulo-overlay {
+}
+
+.overlay .descripcion hr {
+  width: 70%;
+  height: 1px;
+  background: #9b9b9b;
+}
+
+.overlay .descripcion .titulo span {
+  padding: 0;
+  margin: 0;
+  color: #0d7cff;
+}
+
+.overlay .descripcion .svg-descripcion {
+  width: 20px;
+}
