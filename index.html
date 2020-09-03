@@ -26,10 +26,14 @@
     <link rel="stylesheet" href="css/estilos.css" />
 
     <!-- Fonts -->
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"/>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -60,11 +64,11 @@
       <img src="recursos/logoPrueba.png" alt="" class="rounded-circle" />
       <nav class="menu">
         <ul>
-          <li class="active"><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li class="active"><a href="#inicio" data-scroll-spy>Inicio</a></li>
+          <li><a href="#servicios" data-scroll-spy>Servicios</a></li>
+          <li><a href="#portafolio" data-scroll-spy >Portfolio</a></li>
+          <li><a href="#questions" data-scroll-spy>Acerca de</a></li>
+          <li><a href="#formulario" data-scroll-spy>Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -79,14 +83,14 @@
       <nav class="menu-panel">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
-        <a href="#">Acerca de</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contacto</a>
+        <a href="#about">Acerca de</a>
+        <a href="#portafolio">Portfolio</a>
+        <a href="#formulario">Contacto</a>
       </nav>
     </aside>
 
     <!---------- Seccion Banner ---------->
-    <section class="banner" id="inicio">
+    <section class="section banner" id="inicio" data-scroll-spy>
       <img
         src="recursos/logoPrueba.png"
         alt=""
@@ -106,7 +110,7 @@
 
     <!---------- Seccion Servicios ---------->
 
-    <section class="seccion servicios" id="servicios">
+    <section class="seccion section servicios" id="servicios" data-scroll-spy>
       <div class="container">
         <div class="titulo">
           <h3 class="bottom">Servicios</h3>
@@ -130,7 +134,7 @@
             <article
               class="card d-flex justify-content-center align-items-center"
             >
-              <img src="recursos/diseño.png" alt="" class="rounded-circle" />
+              <img src="recursos/tarj2.png" alt="" class="rounded-circle" />
               <p class="titulo-card">Diseño Web</p>
               <p class="">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -144,7 +148,7 @@
             <article
               class="card d-flex justify-content-center align-items-center"
             >
-              <img src="recursos/diseño.png" alt="" class="rounded-circle" />
+              <img src="recursos/tarj3.png" alt="" class="rounded-circle" />
               <p class="titulo-card">Diseño Web</p>
               <p class="">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -159,7 +163,7 @@
 
     <!---------- Seccion About ---------->
 
-    <section class="about" id="about">
+    <section class="about section" id="about" data-scroll-spy>
       <article class="banner-info">
         <h4 class="titulo-about">Sobre mi</h4>
         <p>
@@ -174,7 +178,7 @@
 
     <!---------- Seccion Portafolio ---------->
 
-    <section class="seccion portafolio" id="portafolio">
+    <section class="seccion section portafolio" id="portafolio" data-scroll-spy>
       <div class="container">
         <div class="titulo">
           <h3 class="bottom">Portafolio</h3>
@@ -383,6 +387,284 @@
       </div>
     </section>
 
+    <!---------- Seccion Preguntas---------->
+
+    <section class="section questions" id="questions" data-scroll-spy>
+      <div class="container">
+        <div class="titulo">
+          <h3 class="bottom">Preguntas</h3>
+        </div>
+        <!-- Acordeon -->
+        <div class="row">
+          <div class="col-md-8">
+        
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      <!-- <img src="recursos/acor1.svg" alt=""> -->
+                      Diseño Responsivo
+                    </button>
+                  </h2>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                    officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                    wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      Informacion Item #2
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                    officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                    wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      Informacion Item #3
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                    officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                    wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                      aria-expanded="false" aria-controls="collapseFour">
+                      Informacion Item #4
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                    officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                    wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+          <div class="col-md-4">
+            <img src="recursos/questions.svg" width="100%" height="90%" alt="">
+          </div>
+      </div>
+    </section>
+
+    <!---------- Seccion Tecnologias---------->
+
+    <section class="tecno" id="tecno">
+      <article class="banner-tecno">
+        <h4 class="titulo-tecno">Tecnologias</h4>
+        <div class="logos-tecno">
+          <img src="recursos/html5.svg" class="logo-tecno" alt="HTML5">
+          <img src="recursos/css.svg" class="logo-tecno" alt="CSS">
+          <img src="recursos/bootstrap.svg" class="logo-tecno" alt="Bootstrap">
+          <img src="recursos/javascript.svg" class="logo-tecno" alt="JavaScript">
+          <img src="recursos/react.svg" class="logo-tecno" alt="React.js">
+          <img src="recursos/git.svg" class="logo-tecno" alt="Git">
+          <img src="recursos/github.svg" class="logo-tecno" alt="GitHub">
+          <img src="recursos/firebase.svg" class="logo-tecno" alt="Firebase">
+          <img src="recursos/wordpress.svg" class="logo-tecno" alt="WordPress">
+        </div>
+      </article>
+    </section>
+
+    <!---------- Seccion Formulario ---------->
+
+    <section class="formulario section" id="formulario" data-scroll-spy>
+      <div class="container">
+          <div class="titulo">
+            <h3 class="bottom">Contacto</h3>
+          </div>
+
+        <div class="row">
+          <div class="col-lg-7 col-sm-12 mt-5">
+            <form class="contacto-formulario">
+              <h3 class="text-center titulo-form">Contactame</h3>
+    
+              <!-- Grupo: Nombre -->
+              <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre y apellido"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Solo acepta letras y espacios en blanco
+                </div>
+    
+              </div>
+              <!-- Grupo: Email -->
+              <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Email</label>
+                <div class="formulario__grupo-input">
+                  <input type="email" class="formulario__input" name="email" id="email" placeholder="correo@correo.com"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Solo puede contener letras, numeros, puntos, guiones y guion bajo.
+                </div>
+    
+              </div>
+    
+              <!-- Grupo: Telefono -->
+              <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Telefono</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Telefono valido"
+                    pattern="^\d{7,14}$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                </div>
+    
+              </div>
+    
+              <!-- Grupo: Ciudad y provincia -->
+              <div class="form-row formulario__grupo my-2" id="grupo__ciudad">
+                <div class="form-group col-md-8">
+                  <label for="inputCity" class="formulario__label">Ciudad</label>
+                  <input type="text" data-ciudad="ciudad" class="form-control" id="inputCity" placeholder="Pergamino">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState" class="formulario__label">Provincia</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Cambiar...</option>
+                    <option>Buenos Aires</option>
+                  </select>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Debe ingresar ubicacion
+                </div>
+              </div>
+    
+              <!-- Grupo: Comentario -->
+              <div class="form-row formulario__grupo" id="grupo__comentarios">
+                <div class="form-group col-12">
+                  <textarea class="form-control" data-comentarios="comentarios" id="" cols="50" rows="5"
+                    placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" required></textarea>
+                  <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                    Solo puede contener 255 carecteres maximo.
+                  </div>
+                </div>
+              </div>
+    
+              <div class="formulario__grupo formulario__btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <div class="contact-form-loader my-3 none">
+                  <img src="recursos/rings.svg" alt="Cargando.." />
+                </div>
+                <div class="alert alert-info w-100 text-center alerta-exito none" role="alert">
+                  El mensaje ha sido enviado con exito!
+                </div>
+              </div>
+    
+            </form>
+          </div>
+          <div class="col-lg-5 col-sm-12 mt-5">
+            <div class="info">
+              <h3 class="text-center titulo-form">Redes</h3>
+    
+              <div class="email">
+                <a href="" class="icono"><i class="far fa-envelope"></i></a>
+                <h4><a href="">info@agustinoweb.com</a></h4>
+              </div>
+    
+              <div class="instagram">
+                <a href="" class="icono"><i class="fab fa-instagram"></i></a>
+                <h4><a href="">@agustinoweb</a></h4>
+              </div>
+    
+              <div class="github">
+                <a href="" class="icono"><i class="fab fa-github"></i></a>
+                <h4><a href="">@agustinoweb</a></h4>
+              </div>
+    
+              <div class="twitter">
+                <a href="" class="icono"><i class="fab fa-twitter"></i></a>
+                <h4><a href="">@agustinoweb</a></h4>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!---------- Footer ---------->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 col-md-4 order-lg-1 order-sm-1 box-footer d-flex flex-row justify-content-center align-items-center ">
+            <img alt="image" class="rounded-circle" src="recursos/logoPrueba.png" width="10%">
+            <p class="text-white text-center mb-0 ml-2">AgustinoWeb</p>
+          </div>
+    
+          <div class="col-lg-4 col-sm-12 col-md-4 order-lg-2 order-sm-3 box-footer d-flex justify-content-center align-items-center text-white ">
+           <p class="m-0">Ir a Inicio</p>
+          <img src="recursos/verInicio.svg" alt="" />
+          </div>
+    
+          <div class="col-lg-4 col-sm-12 col-md-4 order-lg-3 order-sm-2 box-footer box-redes d-flex justify-content-center align-items-center order-sm-1">
+            <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        
+        </div>
+        <div class="row">
+          <div class="col-lg-12 box-footer d-flex flex-column justify-content-center align-items-center ">
+            <hr>
+            <div class="copy d-block w-100">
+              <p class=" text-white mt-4 m-0 text-lg-center text-sm-left">© 2020 | Desarrollado por Agustin Veliz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- JavaScript Librerias y Modulos-->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -409,7 +691,8 @@
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js"></script>
 
-    <!-- JavaScript Modulos -->
-    <script src="js/modulos_principales.js" type="module"></script>
+  <!-- JavaScript Modulos -->
+  <script src="js/modulos_principales.js" type="module"></script>
+
   </body>
 </html>

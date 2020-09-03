@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="formulario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+
+
+    <section class="formulario" id="formulario">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-sm-12 mt-5">
+            <form class="contacto-formulario" >
+              <h3 class="text-center titulo-form">Contactame</h3>
+
+              <!-- Grupo: Nombre -->
+              <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre y apellido" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Solo acepta letras y espacios en blanco
+                </div>
+              
+              </div>
+              <!-- Grupo: Email -->
+              <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Email</label>
+                <div class="formulario__grupo-input">
+                  <input type="email" class="formulario__input" name="email" id="email" placeholder="correo@correo.com"  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Solo puede contener letras, numeros, puntos, guiones y guion bajo. 
+                </div>
+              
+              </div>
+
+              <!-- Grupo: Telefono -->
+              <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Telefono</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Telefono valido" pattern="^\d{7,14}$" required>
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                </div>
+
+              </div>
+
+              <!-- Grupo: Ciudad y provincia -->
+              <div class="form-row formulario__grupo my-2" id="grupo__ciudad">
+                <div class="form-group col-md-8">
+                  <label for="inputCity" class="formulario__label">Ciudad</label>
+                  <input type="text" data-ciudad="ciudad" class="form-control" id="inputCity" placeholder="Pergamino">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState" class="formulario__label">Provincia</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Cambiar...</option>
+                    <option>Buenos Aires</option>
+                  </select>
+                </div>
+                <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                  Debe ingresar ubicacion
+                </div>
+              </div>
+
+              <!-- Grupo: Comentario -->
+              <div class="form-row formulario__grupo" id="grupo__comentarios">
+                <div class="form-group col-12">
+                  <textarea class="form-control" data-comentarios="comentarios"  id="" cols="50" rows="5" placeholder="Escribe tus comentarios"
+                   data-pattern="^.{1,255}$" required></textarea>
+                  <div class="alert alert-danger formulario__input-error mt-2" role="alert">
+                    Solo puede contener 255 carecteres maximo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="formulario__grupo formulario__btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <div class="contact-form-loader my-3 none">
+                  <img src="img/rings.svg" alt="Cargando.." />
+                </div>
+                <div class="alert alert-info w-100 text-center alerta-exito none" role="alert">
+                  El mensaje ha sido enviado con exito!
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div class="col-lg-5 col-sm-12 mt-5">
+            <div class="info">
+              <h3 class="text-center titulo-form">Redes</h3>
+
+              <div class="email">
+                <a href="" class="icono"><i class="far fa-envelope"></i></a>
+                <h4><a href="">info@agustinoweb.com</a></h4>
+              </div>
+              
+              <div class="instagram">
+                <a href="" class="icono"><i class="fab fa-instagram"></i></a>
+                <h4><a href="">@agustinoweb</a></h4>
+              </div>
+
+              <div class="github">
+                <a href="" class="icono"><i class="fab fa-github"></i></a>
+                <h4><a href="">@agustinoweb</a></h4>
+              </div>
+              
+              <div class="twitter">
+              <a href="" class="icono"><i class="fab fa-twitter"></i></a>
+              <h4><a href="">@agustinoweb</a></h4>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script>
+
+      const $form = document.querySelector(".contacto-formulario"),
+        $inputs = document.querySelectorAll(".contacto-formulario [required]");      
+
+      const expresiones = {
+          usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 
+          nombre: /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/,
+          password: /^.{4,12}$/,
+          correo: /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
+          telefono: /^\d{7,14}$/,
+        };
+
+      document.addEventListener("keyup", e=>{
+        if(e.target.matches(".contacto-formulario [required]")){
+          const $input = e.target,
+          pattern = $input.pattern || $input.dataset.pattern
+          if (pattern === $input.pattern && $input.value !== "") {
+            //Si el valor del input no coincide con la expresion regular
+            let regex = new RegExp(pattern);
+            if(!regex.exec($input.value)){
+              //No valida
+             document.getElementById(`grupo__${$input.name}`).classList.add("formulario__grupo-incorrecto");
+             document.querySelector(`#grupo__${$input.name} i`).classList.add('fa-times-circle');
+              document.querySelector(`#grupo__${$input.name} i`).classList.remove('fa-check-circle');
+             document.querySelector(`#grupo__${$input.name} .formulario__input-error`).classList.add('formulario__input-error-activo');
+            }else{
+              //Si valida
+            document.getElementById(`grupo__${$input.name}`).classList.remove("formulario__grupo-incorrecto");
+            document.getElementById(`grupo__${$input.name}`).classList.add("formulario__grupo-correcto");
+            document.querySelector(`#grupo__${$input.name} i`).classList.add('fa-check-circle');
+            document.querySelector(`#grupo__${$input.name} i`).classList.remove('fa-times-circle');
+            document.querySelector(`#grupo__${$input.name} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+            }
+          }
+
+          // Los que tienen patron por medio de dataset
+          if (pattern === $input.dataset.pattern && $input.focus){
+            let regex = new RegExp(pattern);
+            if(!regex.exec($input.value)){
+              //Si no coincide o es vacio
+             document.querySelector(`#grupo__${$input.dataset.comentarios} .formulario__input-error`).classList.add('formulario__input-error-activo');
+            }else{
+               document.querySelector(`#grupo__${$input.dataset.comentarios} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+            }
+          }
+            
+          //Validamos los inputs que no tienen patron
+
+          // if (!pattern) {
+          //   if($input.value === ""){
+          //     const $validarData =  $input.dataset.ciudad
+          //     document.querySelector(`#grupo__${$validarData} .formulario__input-error`).classList.add('formulario__input-error-activo');
+          //   }else{
+          //     document.querySelector(`#grupo__${$validarData} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+          //   }
+          // }
+
+          //Limpiamos errores cuando se borra
+          if($input.value === "" ){
+             document.getElementById(`grupo__${$input.name}`).classList.remove("formulario__grupo-incorrecto");
+             document.getElementById(`grupo__${$input.name}`).classList.remove("formulario__grupo-correcto");
+             document.querySelector(`#grupo__${$input.name} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+          }
+
+        }
+      })
+
+      document.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const $loader = document.querySelector(".formulario__btn-enviar .contact-form-loader"),
+          $respuesta = document.querySelector(".alerta-exito");
+
+        $loader.classList.remove("none");
+
+        setTimeout(() => {
+          $loader.classList.add("none");
+          $respuesta.classList.remove("none");
+          const elementosForm = document.querySelectorAll(".formulario__grupo");
+          const recorriendo = elementosForm.forEach((el) => {
+            el.classList.remove('formulario__grupo-correcto');
+             el.classList.remove('fa-check-circle');
+          }
+          );
+          $form.reset();
+          
+          setTimeout(() => $respuesta.classList.add("none"), 3000);
+        }, 3000);
+      })
+
+       
+    </script>
+  </body>
+</html>

@@ -13,6 +13,5 @@ export default function scrollTop() {
       $btnVerMas.classList.remove("none");
       $parrafo.classList.remove("none");
     }
-    console.log("Hola Monaso");
   });
 }

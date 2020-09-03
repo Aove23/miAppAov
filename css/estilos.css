@@ -17,13 +17,16 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: var(--main-font);
   font-size: var(--font-size);
-  scroll-behavior: smooth;
 }
 
 .seccion {
@@ -84,6 +87,7 @@ header {
 .header.sticky {
   padding: 18px 100px;
   background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 header img {
@@ -276,7 +280,8 @@ header.sticky ul li a:hover {
 }
 
 #servicios .card img {
-  width: 50%;
+  width: 120px;
+  height: 80px;
   margin-bottom: 15px;
   /* border: 1px solid #0d7cff; */
 }
@@ -327,12 +332,13 @@ header.sticky ul li a:hover {
 
 #about .banner-info .titulo-about {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 30px;
   color: white;
   margin-bottom: 20px;
 }
 
 #about .banner-info p {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   color: white;
@@ -363,10 +369,13 @@ header.sticky ul li a:hover {
 }
 
 /* ************** Seccion Portfolio ************** */
+#portafolio {
+  /* padding-top: 60px; */
+}
 
 .portafolio .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -379,7 +388,16 @@ header.sticky ul li a:hover {
   margin-bottom: 40px;
 }
 
+.cabecera .logo h3 {
+  font-family: var(--second-font);
+  color: #212529;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .cabecera .logo p {
+  font-weight: 300;
+  font-style: italic;
   color: #9b9b9b;
 }
 
@@ -617,6 +635,367 @@ header.sticky ul li a:hover {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
 }
 
+/* ************** Seccion Acordeon ************** */
+
+#questions {
+  padding-top: 50px;
+  background-color: #f9f9fa;
+  height: calc(100vh - 30px);
+}
+
+#questions .titulo {
+  padding-bottom: 50px;
+  margin-bottom: 15px;
+}
+
+#questions .card,
+.card-header {
+  background-color: #fff !important;
+  /* border: none !important; */
+  padding: 0 !important;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: var(--second-font);
+}
+
+#questions .card-header {
+  border-left: 2px solid var(--principal-color);
+}
+
+.card {
+  box-shadow: 0 2px 25px 0 rgba(110, 130, 208, 0.18);
+}
+
+.btn-link {
+  width: 100%;
+  height: 60px;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  text-decoration: none !important;
+}
+
+.card-body {
+  background: #e8eeff;
+}
+
+.btn-link:after {
+  content: "\2212";
+  width: 35px;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
+  right: 15px;
+  top: 11px;
+  position: absolute;
+  background: #e8eeff;
+  color: var(--principal-color);
+}
+
+.btn-link.collapsed:after {
+  content: "\002b";
+}
+
+.btn-link:before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+  transform: rotate(45deg);
+  left: 30px;
+  top: 46px;
+}
+
+/* ************** Seccion Tecnologias ************** */
+
+#tecno {
+  width: auto;
+  height: auto;
+  background-color: rgba(33, 37, 41, 0.9);
+  overflow: hidden;
+}
+
+#tecno .banner-tecno {
+  padding: 50px 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tecno .banner-tecno .titulo-tecno {
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+#tecno .banner-tecno .logos-tecno {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tecno .banner-tecno .logos-tecno .logo-tecno {
+  width: 100px;
+  margin-right: 10px;
+}
+/* ************** Seccion Formulario ************** */
+
+#formulario {
+  padding-top: 50px;
+  height: calc(100vh + 150px);
+}
+
+.formulario .contacto-formulario {
+  border-top: 4px solid #0d7cff;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 5px 14px 0 rgba(129, 129, 129, 0.2) !important;
+  padding: 30px;
+}
+
+.formulario .info {
+  border-top: 4px solid #0d7cff;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 5px 14px 0 rgba(129, 129, 129, 0.2) !important;
+  padding: 30px;
+}
+
+.formulario .contacto-formulario .titulo-form,
+.info .titulo-form {
+  font-size: 30px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Formulario  */
+
+.contacto-formulario .formulario__input-error {
+  display: none;
+}
+
+.contacto-formulario .formulario__input-error-activo {
+  display: block;
+}
+
+.contacto-formulario .formulario__grupo {
+  margin-top: 8px;
+}
+
+.contacto-formulario .formulario__mensaje-exito {
+  font-size: 16px;
+  font-weight: 500;
+  color: #14213d;
+  display: none;
+}
+
+.contacto-formulario .formulario__mensaje-exito-activo {
+  display: block;
+}
+
+.contacto-formulario input:focus,
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border: 2px solid rgba(13, 124, 255, 0.8);
+}
+
+.contacto-formulario .formulario__label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contacto-formulario .formulario__grupo-input {
+  position: relative;
+}
+
+.contacto-formulario .formulario__input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.contacto-formulario .formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.contacto-formulario .formulario__btn-enviar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto-formulario .formulario__btn-enviar .formulario__btn {
+  /* width: 60%; */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #0d7cff;
+  box-shadow: 0px 5px 0px 0px rgba(13, 124, 255, 0.8);
+}
+
+.contacto-formulario .formulario__btn-enviar .formulario__btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.contacto-formulario .formulario__btn-enviar .formulario__btn:hover {
+  background-color: rgba(13, 124, 255, 0.8);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Estilos para Validacion Formulario  */
+
+.contacto-formulario
+  .formulario__grupo-correcto
+  .formulario__validacion-estado {
+  color: #0d7cff;
+  opacity: 1;
+}
+
+.contacto-formulario .formulario__grupo-incorrecto .formulario__label {
+  color: #bb2929;
+}
+
+.contacto-formulario
+  .formulario__grupo-incorrecto
+  .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.contacto-formulario .formulario__grupo-incorrecto .formulario__input {
+  border: 2px solid #bb2929;
+}
+
+.none {
+  display: none;
+}
+
+/* Redes  */
+
+.formulario .info .email,
+.formulario .info .instagram,
+.formulario .info .github,
+.formulario .info .twitter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.formulario .info .icono {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(13, 124, 255, 0.8);
+  margin-right: 0 10px;
+  text-decoration: none;
+  font-size: 26px;
+  /* border: 1px solid #444; */
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+    2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  margin-bottom: 18px;
+}
+
+.formulario .info h4 {
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.formulario .info h4 a {
+  text-decoration: none;
+  color: #444;
+}
+
+.formulario .info .icono:hover {
+  transform: translateY(-17px);
+  background: #0d7cff;
+  box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+    2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.formulario .info .icono i:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.formulario .info h4:hover {
+  font-size: 20px;
+  transition: 0.6s;
+}
+
+.formulario .info h4 a:hover {
+  color: #0d7cff;
+}
+
+/* ************** Seccion Footer************** */
+
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  background: #343a40;
+  height: 200px;
+  z-index: 200;
+  overflow: hidden;
+}
+
+.footer .row hr {
+  width: 100%;
+  border: 1px solid #fff;
+  margin: 0px;
+  text-align: center;
+}
+
+.footer .box-footer {
+  height: 90px;
+  margin: 2px 0;
+}
+
+.footer .box-redes a {
+  font-size: 25px;
+  color: #fff;
+}
+
+.footer .box-redes a:hover {
+  transition: 0.3s;
+  font-size: 30px;
+  color: #0d7cff;
+}
+
 /* ************** Componentes del Menu Hamburguesa ************** */
 
 .panel-btn {
@@ -832,5 +1211,101 @@ header.sticky ul li a:hover {
 
   .cabecera .barra-busqueda {
     width: 100%;
+  }
+
+  .overlay .descripcion {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: var(--second-font);
+    max-width: 350px;
+    background-color: #fff;
+    margin-top: 5px;
+    border-radius: 5px;
+    border-left: 5px solid #0d7cff;
+  }
+
+  .overlay #btn-cerrar-popup {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 1vw;
+    top: -30px;
+  }
+
+  /* ************** Componentes Acordeon ************** */
+
+  #questions {
+    background-color: #f9f9fa;
+    height: auto;
+  }
+
+  /* ************** Componentes Tecnologias ************** */
+  #tecno .banner-tecno {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tecno .banner-tecno .titulo-tecno {
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  #tecno .banner-tecno .logos-tecno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #tecno .banner-tecno .logos-tecno .logo-tecno {
+    width: 80px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* ************** Componentes Formulario ************** */
+
+  #formulario {
+    height: auto;
+  }
+
+  .formulario .contacto-formulario .titulo-form,
+  .info .titulo-form {
+    font-size: 26px;
+    color: #444;
+    font-weight: 600;
+  }
+
+  .footer {
+    margin-top: 40px;
+    background: #343a40;
+    height: auto;
+  }
+
+  .footer .box-footer {
+    height: 70px;
+    margin: 10px 0;
+  }
+
+  .footer .box-redes a {
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .footer .box-redes a:hover {
+    transition: 0.3s;
+    font-size: 30px;
+    color: #0d7cff;
   }
 }
