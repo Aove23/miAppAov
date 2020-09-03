@@ -744,6 +744,7 @@ header.sticky ul li a:hover {
 /* ************** Seccion Formulario ************** */
 
 #formulario {
+  z-index: 800;
   padding-top: 50px;
   height: calc(100vh + 150px);
 }
@@ -902,7 +903,8 @@ select.form-control:focus {
 .formulario .info .email,
 .formulario .info .instagram,
 .formulario .info .github,
-.formulario .info .twitter {
+.formulario .info .twitter,
+.formulario .info .linkedin {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -965,6 +967,7 @@ select.form-control:focus {
 /* ************** Seccion Footer************** */
 
 .footer {
+  z-index: 100;
   margin-top: 40px;
   padding-top: 20px;
   background: #343a40;
@@ -983,6 +986,10 @@ select.form-control:focus {
 .footer .box-footer {
   height: 90px;
   margin: 2px 0;
+}
+
+.footer .box-footer a {
+  color: #fff;
 }
 
 .footer .box-redes a {
