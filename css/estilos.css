@@ -390,7 +390,7 @@ header.sticky ul li a:hover {
 
 .cabecera .logo h3 {
   font-family: var(--second-font);
-  color: #212529;
+  color: #444;
   font-size: 30px;
   font-weight: 600;
 }
@@ -857,6 +857,11 @@ select.form-control:focus {
   display: inline-block;
   background-color: #0d7cff;
   box-shadow: 0px 5px 0px 0px rgba(13, 124, 255, 0.8);
+  outline: none;
+}
+
+.contacto-formulario .formulario__btn-enviar .formulario__btn:focus {
+  outline: none;
 }
 
 .contacto-formulario .formulario__btn-enviar .formulario__btn:active {
@@ -1041,6 +1046,11 @@ select.form-control:focus {
     justify-content: center;
     align-items: center;
     background-color: var(--principal-color);
+    outline: none;
+  }
+
+  .panel-btn:focus {
+    outline: none;
   }
 
   .panel-btn .hamburger-inner,
@@ -1066,7 +1076,7 @@ select.form-control:focus {
     overflow-y: auto;
     display: flex;
     align-content: center;
-    background-color: var(--secundario-color);
+    background-color: rgba(69, 80, 91, 0.85);
     transition: transform 0.3s ease;
     /*De arriba*/
     transform: translate(0, -100%);
@@ -1097,8 +1107,8 @@ select.form-control:focus {
 
   .panel .menu-panel a:hover {
     font-weight: bold;
-    color: #0d7cff;
-    background-color: #fff;
+    /* color: ; */
+    background-color: rgba(13, 124, 255, 0.85);
   }
 
   /* ************** Componentes del Banner ************** */
@@ -1205,10 +1215,31 @@ select.form-control:focus {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
   }
 
-  /* ************** Componentes del Portafolio ************** */
+  /* ************** Componentes del Portafolio
+   ************** */
+  .cabecera .logo {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .cabecera .logo h3 {
+    font-family: var(--second-font);
+    color: #444;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .cabecera .logo p {
+    font-weight: 300;
+    font-style: italic;
+    color: #9b9b9b;
+    margin: 0;
+  }
+
   .portafolio .container {
     width: 100%;
-    max-width: 800px;
+    /* max-width: 800px; */
+    /* width: auto; */
     margin: auto;
   }
 
@@ -1293,6 +1324,8 @@ select.form-control:focus {
     color: #444;
     font-weight: 600;
   }
+
+  /* ************** Componentes Footer ************** */
 
   .footer {
     margin-top: 40px;

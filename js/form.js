@@ -97,7 +97,7 @@ export default function validacionForm() {
   });
 
   d.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const $loader = d.querySelector(
         ".formulario__btn-enviar .contact-form-loader"
       ),
